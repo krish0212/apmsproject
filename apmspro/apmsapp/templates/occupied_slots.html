@@ -1,0 +1,14 @@
+<!-- occupied_slots.html -->
+
+{% block content %}
+  <h1>Occupied Slots</h1>
+  {% if occupied_slots %}
+    <ul>
+      {% for slot in occupied_slots %}
+        <li>{{ slot.slot_number }} - <span style="color: red">Occupied</span></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No occupied slots</p>
+  {% endif %}
+{% endblock %}

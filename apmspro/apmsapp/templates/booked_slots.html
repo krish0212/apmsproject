@@ -1,0 +1,14 @@
+{% block content %}
+  <h1>Booked Slots</h1>
+  {% if booked_slots %}
+    <ul>
+      {% for slot in booked_slots %}
+        <li>{{ slot.slot_number }} - <span style="color: red">Booked</span>
+          (<a href="{% url 'release_slot' slot.id %}">Release</a>)
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No booked slots</p>
+  {% endif %}
+{% endblock %}

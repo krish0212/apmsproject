@@ -1,0 +1,23 @@
+{% block content %}
+  <h1>Parking Slots</h1>
+  <ul>
+    {% for slot in slots %}
+      <li class="{% if slot.is_available %}available{% else %}occupied{% endif %}">
+        Slot {{ slot.slot_number }}
+        {% if slot.is_available %}
+          (<a href="{% url 'book_slot' slot.id %}">book</a>)
+        {% else %}
+          (<a href="{% url 'release_slot' slot.id %}">release</a>)
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+<style>
+  .available { color: green; }
+  .occupied { color: red; }
+</style>
+
+
+

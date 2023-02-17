@@ -1,0 +1,28 @@
+{% block content %}
+  <h1>Available Slots</h1>
+  {% if slots %}
+    <ul class="showcase">
+      {% for slot in slots %}
+        <li>Slot Number:{{ slot.slot_number }} <span style="color: green">Unoccupied Slot</span>
+          <a href="{% url 'book_slot' slot.id %}" >
+          <button type="submit">Book</button></a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No available slots</p>
+  {% endif %}
+  {% if booked_slots %}
+    <ul>
+      {% for slot in booked_slots %}
+        <li>Slot Number:{{ slot.slot_number }} - <span style="color: red">Occupied Slot</span>
+          <a href="{% url 'release_slot' slot.id %}">
+          <button type="submit">Release</button></a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No booked slots</p>
+  {% endif %}
+{% endblock %}
+

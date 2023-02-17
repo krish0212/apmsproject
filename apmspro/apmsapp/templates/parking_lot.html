@@ -1,0 +1,8 @@
+{% for slot in slots %}
+        <span>Slot Number:{{ slot.slot_number }}:</span>
+        {% if slot.plateresult %}
+            <span>Occupied by {{ slot.license_plate }}</span>
+        {% else %}
+            <span>Unoccupied</span>
+        {% endif %}
+{% endfor %}

@@ -1,0 +1,95 @@
+{% block content %}
+  <h1>Book Slot</h1>
+  <p>Slot Number: {{ slot.slot_number }}</p>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Book</button>
+  </form>
+{% endblock %}
+
+<ul class="showcase">
+  <li>
+    <div class="seat"></div>
+    <small>N/A</small>
+  </li>
+  <li>
+    <div class="seat selected"></div>
+    <small>Selected</small>
+  </li>
+  <li>
+    <div class="seat occupied"></div>
+    <small>Occupied</small>
+  </li>
+</ul>
+
+<div class="container">
+  <div class="screen"></div>
+
+  <div class="row">
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+  </div>
+  <div class="row">
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat "></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+  </div>
+  <div class="row">
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+  </div>
+  <div class="row">
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+  </div>
+  <div class="row">
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+  </div>
+  <div class="row">
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+    <div class="seat"></div>
+  </div>
+</div>
+
+<div class='cta'>
+  <button class='book_btn'> Book Your Parking Slots </button>
+</div>
+</body>
+</html>
