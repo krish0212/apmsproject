@@ -1,0 +1,26 @@
+{% extends 'accounts_main.html' %}
+{% block content %}
+<table>
+    {% for slot in slots %}
+      {% if forloop.first %}
+        <tr>
+      {% endif %}
+        <td>
+          {{ slot.row }}, {{ slot.column }}
+          {% if slot.is_available %}
+            Available
+          {% else %}
+            Not available
+          {% endif %}
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Update">
+          </form>
+        </td>
+      {% if forloop.last %}
+        </tr>
+      {% endif %}
+    {% endfor %}
+    </table>
+  {% endblock content %}

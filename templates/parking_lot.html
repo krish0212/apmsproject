@@ -1,0 +1,19 @@
+{% extends 'accounts_main.html' %}
+{% block content %}
+<table>
+  {% for row in parking_lot.get_slots %}
+    <tr>
+      {% for slot in row %}
+        <td>
+          {% if slot %}
+            Occupied
+          {% else %}
+            Empty
+          {% endif %}
+        </td>
+      {% endfor %}
+    </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
