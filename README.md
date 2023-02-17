@@ -2,7 +2,7 @@
 
 apmsproject 
 Main project - Dashboard and UI design 
-Create a project Lot
+and Create a Parking Lot
 
 apmspro
 Available slots - Occupied or Unoccupied
